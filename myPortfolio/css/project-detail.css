@@ -408,13 +408,27 @@ html::-webkit-scrollbar {
   }
 
   .detail-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 0;
     padding: 22px;
   }
 
   .about-learning-section {
-    padding: 15px 22px;
-    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 22px;
+    gap: 24px;
+  }
+
+  .about-learning-section article {
+    min-width: 0;
+  }
+
+  .about-learning-section article p {
+    overflow-wrap: break-word;
   }
 
   .back-link {
