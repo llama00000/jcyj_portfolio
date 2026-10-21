@@ -1,0 +1,429 @@
+/* ========================================
+   Project Detail Page
+   ======================================== */
+
+.detail-page {
+  padding-top: 125px;
+  padding-bottom: 100px;
+}
+
+.detail-heading {
+  max-width: 820px;
+  margin-bottom: 48px;
+}
+
+.detail-heading h1 {
+  margin-bottom: 18px;
+}
+
+.detail-heading h1 span {
+  background: linear-gradient(110deg, #0a3a30, var(--green), var(--cyan));
+  background-clip: text;
+  color: transparent;
+}
+
+.detail-heading .intro {
+  max-width: 760px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* ========================================
+   Technology Tags
+   ======================================== */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.tag-list span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   Detail Sections
+   ======================================== */
+
+.detail-section {
+  margin-top: 42px;
+}
+
+.section-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.section-title h2,
+.detail-section h2 {
+  margin-bottom: 12px;
+}
+
+.section-title > p {
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+}
+
+.section-description {
+  max-width: 760px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   Screenshots
+   ======================================== */
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.screenshot-card,
+.wireframe-card {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--panel);
+}
+
+.screenshot-card a,
+.wireframe-card a {
+  display: block;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.2s ease;
+}
+
+.wireframe-card img {
+  display: block;
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.screenshot-card a:hover img,
+.wireframe-card a:hover img {
+  transform: scale(1.02);
+}
+
+.screenshot-card figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px 17px 17px;
+  color: var(--text);
+}
+
+.screenshot-card figcaption span,
+.wireframe-card figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.wireframe-card figcaption {
+  padding: 14px 17px 17px;
+}
+
+.image-note {
+  margin-top: 12px;
+  font-size: 0.85rem;
+}
+
+/* ========================================
+   Wireframe & Technologies Used
+   ======================================== */
+
+.wireframe-tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.wireframe-tech-grid > .detail-section {
+  min-width: 0;
+  margin-top: 42px;
+}
+
+/* Align section numbers and headings */
+.wireframe-tech-grid > .detail-section > .index {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.wireframe-tech-grid > .detail-section > h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Wireframe image size */
+.wireframe-tech-grid .screenshot-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.wireframe-tech-grid .screenshot-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.wireframe-tech-grid .screenshot-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+/* Technologies tags */
+.wireframe-tech-grid .tag-list {
+  margin-top: 18px;
+}
+
+/* ========================================
+   Screenshot Zoom
+   ======================================== */
+
+.zoom-image {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.88);
+  cursor: zoom-out;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  cursor: default;
+}
+
+/* ========================================
+   Project Information
+   ======================================== */
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 32px;
+  padding: 20px 30px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--panel);
+  height: 600px;
+  min-height: 0;
+}
+
+.detail-grid article p:last-child {
+  margin-bottom: 0;
+  line-height: 1.8;
+}
+
+/* About the Project & What I Learned */
+
+.about-learning-section {
+  padding: 12px 30px;
+  gap: 32px;
+}
+
+.about-learning-section article {
+  min-width: 0;
+}
+
+.about-learning-section article p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about-learning-section article p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   Project Actions
+   ======================================== */
+
+.project-actions {
+  display: inline-flex;
+  margin-top: 0;
+}
+
+.play-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 12px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: normal;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.play-button:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* ========================================
+   Navigation
+   ======================================== */
+
+.back-link {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  margin-left: auto;
+  margin-right: 16px;
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  background: var(--panel);
+  color: var(--cyan);
+}
+
+.topbar .nav {
+  display: flex;
+  align-items: center;
+}
+
+.topbar .nav .theme {
+  position: static;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   Dark Mode
+   ======================================== */
+
+body.dark .detail-heading h1 span {
+  background: linear-gradient(110deg, #f0fffb, var(--green), var(--cyan));
+  background-clip: text;
+  color: transparent;
+}
+
+/* ========================================
+   Hide Scrollbar but Keep Scrolling
+   ======================================== */
+
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================================
+   Responsive Layout
+   ======================================== */
+
+@media (max-width: 700px) {
+  .detail-page {
+    padding-top: 110px;
+  }
+
+  .section-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wireframe-tech-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .wireframe-tech-grid > .detail-section {
+    margin-top: 32px;
+  }
+
+  .wireframe-tech-grid .screenshot-card {
+    max-width: 100%;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .about-learning-section {
+    padding: 15px 22px;
+    gap: 20px;
+  }
+
+  .back-link {
+    margin-right: 10px;
+    padding: 7px 10px;
+  }
+
+  .foot {
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+}

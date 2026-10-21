@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Memory Card Flip Game project by an IT student, built with HTML, CSS and JavaScript.">
+  <title>Memory Card Flip Game | Project Details</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+  <script src="../js/script.js" defer></script>
+  <script src="../js/project-detail.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="wrap nav" aria-label="Main navigation">
+      <a class="textlink back-link" href="../index.html#projects">← Back to Projects</a>
+      <button class="theme" id="theme" aria-label="Toggle light and dark theme">☾</button>
+    </nav>
+  </header>
+
+  <main class="wrap detail-page">
+    <section class="detail-heading">
+      <p class="index">PROJECT DETAILS ─ 02</p>
+      <h1>Memory Card <span>Flip Game.</span></h1>
+      <p class="muted intro">
+        A simple memory matching game built with HTML, CSS and JavaScript. Players flip two cards at a time,
+        try to find matching pairs, and complete the game using as few steps and as little time as possible.
+      </p>
+      <div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span>
+	    <div class="project-actions">
+          <a class="play-button"
+             href="FCG_documents/index.html"
+             target="_blank"
+             rel="noopener">
+             ▶ Play Game
+          </a>
+        </div>
+	  </div>
+    </section>
+
+    <section class="detail-section" aria-labelledby="screenshots-title">
+      <div class="section-title">
+        <div><h2 id="screenshots-title">Game Screenshots</h2></div>
+        <p class="muted">A look at the game from start to finish.</p>
+      </div>
+      <div class="screenshot-grid">
+        <figure class="screenshot-card">
+		  <img src="FCG_documents/FCG_images/fc_01.png"
+               alt="Memory Card Flip Game at the start"
+               loading="lazy"
+			   class="zoom-image">
+          <figcaption>
+            <strong>Game Start</strong>
+            <span>The cards are face down and ready to match.</span>
+          </figcaption>
+        </figure>
+		
+        <figure class="screenshot-card">
+          <img src="FCG_documents/FCG_images/fc_03.png"
+               alt="Memory Card Flip Game showing cards flipped to reveal pictures"
+               loading="lazy"
+			   class="zoom-image">
+          <figcaption>
+            <strong>During Gameplay</strong>
+            <span>Flip cards and remember where each picture appears.</span>
+          </figcaption>
+        </figure>
+
+		<figure class="screenshot-card">
+		  <img src="FCG_documents/FCG_images/fc_04.png"
+			   alt="Memory Card Flip Game completion message showing time and steps taken"
+			   loading="lazy"
+			   class="zoom-image">
+          <figcaption>
+            <strong>Game Completed</strong>
+            <span>A message displays the time and steps taken.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="screenshot-card">
+          <img src="FCG_documents/FCG_images/fc_05.png"
+               alt="Memory Card Flip Game instructions explaining how to match cards"
+               loading="lazy"
+			   class="zoom-image">
+          <figcaption>
+            <strong>How to Play</strong>
+            <span>Flip two cards at a time and try to match all pairs.</span>
+          </figcaption>
+        </figure>
+	  </div>
+      <p class="image-note muted">Select any screenshot to open it at a larger size.</p>
+    </section>
+
+    <section class="detail-section detail-grid about-learning-section">
+      <article>
+        <h2>About the Project</h2>
+        <p class="muted">
+          The Memory Card Flip Game is a browser-based game where players need to find matching pairs of pictures. 
+		  Players turn over two cards at a time to check if the pictures match. If they match, the cards remain revealed. 
+		  Otherwise, the cards are turned back over, and players can try again.<br><br>
+          The game includes a timer to record the time taken, a step counter to track the number of moves, a restart
+		  button to start a new game, a play button to begin the game, and a help button to display the game instructions. 
+		  When all pairs are matched, a completion message appears to show the total time and number of steps taken. 
+        </p>
+      </article>
+
+      <article>
+        <h2>What I Learned</h2>
+        <p class="muted">
+          I learned how to use HTML to structure the game page and CSS to design the cards, buttons, and overall layout. 
+		  I also used JavaScript to handle card clicks, check whether two cards match, and control the game progress.<br><br>
+          In addition, I practised using JavaScript to update the timer and step counter, restart the game, display the game 
+		  instructions, and show the completion message when all pairs were matched.
+        </p>
+      </article>
+    </section>
+
+    <section class="detail-section" aria-labelledby="screenshots-title">
+      <h2>Design Wireframe</h2>
+
+      <p class="muted section-description">
+        The wireframe shows the planned game layout and main controls.
+      </p>
+	  
+      <div class="screenshot-grid">
+        <figure class="screenshot-card">
+		  <img src="FCG_documents/FCG_images/fc_wireframe01.jpg"
+               alt="Wireframe showing the memory game layout and card grid"
+               loading="lazy"
+			   class="zoom-image">
+          <figcaption>
+            <strong>Web Interface</strong>
+            <span>Wireframe showing the memory game layout and card grid.</span>
+          </figcaption>
+        </figure>
+		
+        <figure class="screenshot-card">
+          <img src="FCG_documents/FCG_images/fc_wireframe02.jpg"
+               alt="Wireframe showing the memory game message boxes"
+               loading="lazy"
+			   class="zoom-image">
+          <figcaption>
+            <strong>Message Box</strong>
+            <span>Wireframe showing the memory game message boxes.</span>
+          </figcaption>
+        </figure>
+	  </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap foot">
+      <a class="logo" href="../index.html"><b>&lt;/&gt;</b> Julia Chai Yia Ju</a>
+      <small>Student project portfolio.</small>
+      <small>© <span id="year"></span> Julia Chai Yia Ju</small>
+      <a class="up" href="fcg.html" aria-label="Back to FCG projects">↑</a>
+    </div>
+  </footer>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <img src="" alt="" id="lightbox-image">
+  </div>
+</body>
+</html>

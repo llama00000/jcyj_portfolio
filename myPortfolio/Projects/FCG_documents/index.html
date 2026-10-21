@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<HTML>
+  <HEAD>
+    <!-- Sets character encoding to UTF-8 -->
+    <META CHARSET="UTF-8">
+    <TITLE>Memory Card Flip Game</TITLE>
+	<!-- Makes page responsive on mobile devices -->
+	<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+	<!-- Link an external CSS file for styling the page -->
+	<LINK REL="stylesheet" HREF="style.css">
+	<!-- Link an external JavaScript file to handle game logic and interactions -->
+	<SCRIPT SRC="script.js"></SCRIPT>
+  </HEAD>
+  <BODY>
+    <!-- Game Title -->
+    <H1>Memory Card Flip Game</H1>
+	
+    <!-- Main background container for the card game and button area -->
+	<DIV CLASS="background">
+	
+	  <!-- Display the game timer  -->
+	  <H2 ID="timer">Time: 0s</H2>
+	  <!-- Display the number of steps taken by the player -->
+	  <H2 ID="steps">Steps: 0</H2>
+	  
+	    <!-- Reset Button -->
+	    <DIV CLASS="BUTTON-wrapper">
+	      <BUTTON CLASS="icon-btn" ONCLICK="restartGame()" ID="restartBtn">
+	        <IMG SRC="image1.jpg" CLASS="btn-icon" ALT="Reset">
+	      </BUTTON>
+	    </DIV>
+		
+		<!-- Start Button -->
+	    <DIV CLASS="BUTTON-wrapper">
+	      <BUTTON CLASS="icon-btn" ONCLICK="startGame()" ID="startBtn">
+	        <IMG SRC="image2.jpg" CLASS="btn-icon" ALT="Start">
+	      </BUTTON>
+	    </DIV>
+		
+		<!-- Game rules Button -->
+		<DIV CLASS="BUTTON-wrapper">
+	      <BUTTON CLASS="icon-btn" ID="helpBtn" ONCLICK="helpGame()">
+	        <IMG SRC="image3.jpg" CLASS="btn-icon" ALT="Help">
+	      </BUTTON>
+	    </DIV>
+		
+		<!-- 4*4 Cards area will be displayed  -->
+        <DIV ID="gameBoard" CLASS="board"></DIV>
+	</DIV>
+	
+	<!-- Help popup to show the game rules -->
+	<DIV ID="helpPopup" CLASS="popup">
+	  <DIV CLASS="popup-content">
+	    <!-- Close button for help popup -->
+        <SPAN ID="closePopup" CLASS="close">&times;</SPAN>
+	    <H3>How to play</H3>
+	    <P>Flip two cards at a time.<BR>If they <B>match</B>, they stay face up.<BR>Try to match all pairs in the least time and steps!</P>
+	  </DIV>
+	</DIV>
+	
+	<!-- Win popup and display win Message -->
+	<DIV ID="winPopup" CLASS="popup" style="display: none;">
+	  <DIV CLASS="popup-content">
+	    <!-- Close button for win message popup -->
+	    <SPAN ID="closeWinPopup" CLASS="close">X</SPAN>
+		<P ID="winMessage">Congratulations!</P>
+	  </DIV>
+	</DIV>
+  </BODY>
+</HTML>
